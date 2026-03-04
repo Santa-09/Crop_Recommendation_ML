@@ -104,14 +104,14 @@ crop_ml_project/
 │   └── reports/                       ← all CSV metric tables saved here
 │
 ├── src/
-│   ├── 01_eda.py                      # Module 1  — Exploratory Data Analysis
-│   ├── 02_feature_engineering.py      # Module 1/2 — Feature creation + data split
-│   ├── 03_regression.py               # Module 2  — Yield prediction (Linear, Poly, PCA)
-│   ├── 04_knn.py                      # Module 3  — K-Nearest Neighbours
-│   ├── 05_decision_tree.py            # Module 3  — Decision Tree (entropy)
-│   ├── 06_svm.py                      # Module 3  — SVM + grid search ⚠ run before predict.py
-│   ├── 07_model_comparison.py         # Module 3  — Compare KNN vs DT vs SVM
-│   ├── 08_clustering.py               # Module 4  — K-Means clustering
+│   ├── eda.py                      # Module 1  — Exploratory Data Analysis
+│   ├── feature_engineering.py      # Module 1/2 — Feature creation + data split
+│   ├── regression.py               # Module 2  — Yield prediction (Linear, Poly, PCA)
+│   ├── knn.py                      # Module 3  — K-Nearest Neighbours
+│   ├── decision_tree.py            # Module 3  — Decision Tree (entropy)
+│   ├── svm.py                      # Module 3  — SVM + grid search ⚠ run before predict.py
+│   ├── model_comparison.py         # Module 3  — Compare KNN vs DT vs SVM
+│   ├── clustering.py               # Module 4  — K-Means clustering
 │   └── predict.py                     # ★ User input predictor — run after training
 │
 ├── tests/
@@ -165,28 +165,28 @@ pip install -r requirements.txt
 
 ```bash
 # Step 1 — Explore the dataset (Module 1)
-python src/01_eda.py
+python src/eda.py
 
 # Step 2 — Engineer features and split data (Module 1/2)
-python src/02_feature_engineering.py
+python src/feature_engineering.py
 
 # Step 3 — Train regression models (Module 2)
-python src/03_regression.py
+python src/regression.py
 
 # Step 4 — Train KNN classifier (Module 3)
-python src/04_knn.py
+python src/knn.py
 
 # Step 5 — Train Decision Tree (Module 3)
-python src/05_decision_tree.py
+python src/decision_tree.py
 
 # Step 6 — Train SVM — MUST run before predict.py (Module 3)
-python src/06_svm.py
+python src/svm.py
 
 # Step 7 — Compare all 3 classifiers (Module 3)
-python src/07_model_comparison.py
+python src/model_comparison.py
 
 # Step 8 — K-Means clustering (Module 4)
-python src/08_clustering.py
+python src/clustering.py
 
 # Step 9 — Run the interactive predictor
 python src/predict.py
@@ -203,7 +203,7 @@ Open any `.py` file → press `F5` → select a config:
 
 ## 🌿 User Input Predictor
 
-After running `06_svm.py`, use the interactive predictor:
+After running `svm.py`, use the interactive predictor:
 
 ### Interactive mode
 
